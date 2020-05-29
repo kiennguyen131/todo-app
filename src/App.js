@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ToDoItem from './components/ToDoItem'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  // constructor() {
+  //   super();
+  //   this.todoItems = [
+  //     { title: 'Choi', isComplete: true},
+  //     { title: 'An'},
+  //     { title: 'Ngu', isComplete: true},
+  //     { title: 'Nghi'}
+  //   ];
+  // }
+
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       {
+  //         this.todoItems.length > 0 && this.todoItems.map((item, index) => <ToDoItem key={index} item={item}/>)
+  //       }
+  //       { 
+  //         this.todoItems.length === 0 && 'nothing here'
+  //       }
+  //     </div>
+  //   )
+  // }
+  render() {
+    return (
+      <div className="App">
+        <ToDoItem/>
+      </div>
+    )
+  }
 }
 
 export default App;
